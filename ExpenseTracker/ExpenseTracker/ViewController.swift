@@ -11,11 +11,12 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var expenseBaseView: UIView!
     
+    @IBOutlet weak var expenseTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         //below make corner raduis
-        expenseBaseView.layer.cornerRadius = 20
+
         //add border to black box
         expenseBaseView.layer.borderWidth = 5.0
         expenseBaseView.layer.borderColor = UIColor.red.cgColor

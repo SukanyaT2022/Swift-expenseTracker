@@ -14,6 +14,8 @@
 		184693C22B22308D00F70C1A /* ExpenseTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 184693C02B22308D00F70C1A /* ExpenseTracker.xcdatamodeld */; };
 		184693C42B22308E00F70C1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184693C32B22308E00F70C1A /* Assets.xcassets */; };
 		184693C72B22308E00F70C1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184693C52B22308E00F70C1A /* LaunchScreen.storyboard */; };
+		18C0413F2B28C4A400B772C1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C0413E2B28C4A400B772C1 /* UIView+Extension.swift */; };
+		18C041412B28C74800B772C1 /* ExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C041402B28C74800B772C1 /* ExpenseTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		184693C32B22308E00F70C1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		184693C62B22308E00F70C1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		184693C82B22308E00F70C1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18C0413E2B28C4A400B772C1 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		18C041402B28C74800B772C1 /* ExpenseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				184693C52B22308E00F70C1A /* LaunchScreen.storyboard */,
 				184693C82B22308E00F70C1A /* Info.plist */,
 				184693C02B22308D00F70C1A /* ExpenseTracker.xcdatamodeld */,
+				18C0413E2B28C4A400B772C1 /* UIView+Extension.swift */,
+				18C041402B28C74800B772C1 /* ExpenseTableViewCell.swift */,
 			);
 			path = ExpenseTracker;
 			sourceTree = "<group>";
@@ -141,9 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C041412B28C74800B772C1 /* ExpenseTableViewCell.swift in Sources */,
 				184693BC2B22308D00F70C1A /* ViewController.swift in Sources */,
 				184693B82B22308D00F70C1A /* AppDelegate.swift in Sources */,
 				184693BA2B22308D00F70C1A /* SceneDelegate.swift in Sources */,
+				18C0413F2B28C4A400B772C1 /* UIView+Extension.swift in Sources */,
 				184693C22B22308D00F70C1A /* ExpenseTracker.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
