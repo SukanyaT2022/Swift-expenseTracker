@@ -99,7 +99,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2a-JL-1Qf">
-                                                            <rect key="frame" x="331" y="39.666666666666664" width="42" height="21"/>
+                                                            <rect key="frame" x="321" y="39.666666666666664" width="42" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -110,7 +110,7 @@
                                                         <constraint firstItem="s2a-JL-1Qf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Rrv-9T-yHA" secondAttribute="trailing" constant="10" id="5sw-y0-Q9Y"/>
                                                         <constraint firstItem="s2a-JL-1Qf" firstAttribute="centerY" secondItem="RNJ-Mq-Dfv" secondAttribute="centerY" id="QS8-yT-SLz"/>
                                                         <constraint firstItem="7oZ-qo-AqP" firstAttribute="centerY" secondItem="RNJ-Mq-Dfv" secondAttribute="centerY" id="TYb-Vt-hW0"/>
-                                                        <constraint firstAttribute="trailing" secondItem="s2a-JL-1Qf" secondAttribute="trailing" constant="10" id="Top-OT-FTp"/>
+                                                        <constraint firstAttribute="trailing" secondItem="s2a-JL-1Qf" secondAttribute="trailing" constant="20" id="Top-OT-FTp"/>
                                                         <constraint firstItem="Rrv-9T-yHA" firstAttribute="leading" secondItem="7oZ-qo-AqP" secondAttribute="trailing" constant="10" id="Uvc-4b-WDL"/>
                                                         <constraint firstItem="7oZ-qo-AqP" firstAttribute="leading" secondItem="RNJ-Mq-Dfv" secondAttribute="leading" constant="5" id="yDh-2f-G10"/>
                                                         <constraint firstItem="Rrv-9T-yHA" firstAttribute="centerY" secondItem="RNJ-Mq-Dfv" secondAttribute="centerY" id="zDK-fB-7dm"/>
@@ -221,7 +221,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bn5-gX-nyQ">
-                                <rect key="frame" x="146.66666666666666" y="268.33333333333331" width="100" height="40"/>
+                                <rect key="frame" x="146.66666666666666" y="368.33333333333331" width="100" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="IpL-6W-sam"/>
@@ -239,26 +239,82 @@
                                     <action selector="submitButtonAction:" destination="214-XI-wTu" eventType="touchUpInside" id="jmU-W2-3cH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMS-2t-fi4">
+                                <rect key="frame" x="20" y="238.33333333333337" width="353" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Fdi-we-wrv"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Select Category"/>
+                                <connections>
+                                    <action selector="categoryButtonAction:" destination="214-XI-wTu" eventType="touchUpInside" id="gb1-yn-XCS"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oH1-pw-JGU">
+                                <rect key="frame" x="10" y="568" width="373" height="250"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ac-uq-cRe">
+                                        <rect key="frame" x="0.0" y="50" width="373" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="LoG-HV-UZi"/>
+                                        </constraints>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtq-Lk-TMj">
+                                        <rect key="frame" x="263" y="5" width="100" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="wiZ-Qp-HMh"/>
+                                            <constraint firstAttribute="height" constant="40" id="yEz-O0-cxY"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                        <connections>
+                                            <action selector="doneButtonAction:" destination="214-XI-wTu" eventType="touchUpInside" id="1Wl-Sz-jn3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="gtq-Lk-TMj" secondAttribute="trailing" constant="10" id="FQa-G8-I07"/>
+                                    <constraint firstAttribute="bottom" secondItem="9ac-uq-cRe" secondAttribute="bottom" id="KiO-fA-yO7"/>
+                                    <constraint firstItem="gtq-Lk-TMj" firstAttribute="top" secondItem="oH1-pw-JGU" secondAttribute="top" constant="5" id="Pti-Xt-AHh"/>
+                                    <constraint firstAttribute="height" constant="250" id="Y7X-dE-o8h"/>
+                                    <constraint firstAttribute="trailing" secondItem="9ac-uq-cRe" secondAttribute="trailing" id="ZLX-H4-zdr"/>
+                                    <constraint firstItem="9ac-uq-cRe" firstAttribute="leading" secondItem="oH1-pw-JGU" secondAttribute="leading" id="p8E-QD-75R"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lps-lX-cED"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="G58-2p-qd9" firstAttribute="leading" secondItem="lps-lX-cED" secondAttribute="leading" constant="30" id="1jY-0X-1Cg"/>
+                            <constraint firstItem="IMS-2t-fi4" firstAttribute="leading" secondItem="lps-lX-cED" secondAttribute="leading" constant="20" id="4MM-Rp-1sl"/>
                             <constraint firstItem="lps-lX-cED" firstAttribute="trailing" secondItem="35R-pZ-qvH" secondAttribute="trailing" constant="30" id="4fh-OL-dZK"/>
-                            <constraint firstItem="Bn5-gX-nyQ" firstAttribute="top" secondItem="Uaw-sU-GtA" secondAttribute="bottom" constant="50" id="IOq-65-7WH"/>
+                            <constraint firstItem="Bn5-gX-nyQ" firstAttribute="top" secondItem="Uaw-sU-GtA" secondAttribute="bottom" constant="150" id="JdP-8i-FPL"/>
+                            <constraint firstItem="oH1-pw-JGU" firstAttribute="leading" secondItem="lps-lX-cED" secondAttribute="leading" constant="10" id="Ldi-Ve-Jw2"/>
                             <constraint firstItem="35R-pZ-qvH" firstAttribute="leading" secondItem="Uaw-sU-GtA" secondAttribute="trailing" constant="10" id="Ng9-M5-MRJ"/>
                             <constraint firstItem="Uaw-sU-GtA" firstAttribute="leading" secondItem="fvw-uN-cPb" secondAttribute="trailing" constant="10" id="WqA-eQ-KfQ"/>
                             <constraint firstItem="Bn5-gX-nyQ" firstAttribute="centerX" secondItem="U3q-gB-GB8" secondAttribute="centerX" id="XCc-kE-T8q"/>
                             <constraint firstItem="35R-pZ-qvH" firstAttribute="centerY" secondItem="Uaw-sU-GtA" secondAttribute="centerY" id="Xc2-WS-0fw"/>
                             <constraint firstItem="Uaw-sU-GtA" firstAttribute="top" secondItem="G58-2p-qd9" secondAttribute="bottom" constant="15" id="Zr6-df-vvw"/>
+                            <constraint firstItem="lps-lX-cED" firstAttribute="bottom" secondItem="oH1-pw-JGU" secondAttribute="bottom" id="bc1-hP-f2u"/>
                             <constraint firstItem="fvw-uN-cPb" firstAttribute="leading" secondItem="lps-lX-cED" secondAttribute="leading" constant="20" id="crR-hr-q1x"/>
                             <constraint firstItem="fvw-uN-cPb" firstAttribute="centerY" secondItem="Uaw-sU-GtA" secondAttribute="centerY" id="dfF-TT-QH0"/>
+                            <constraint firstItem="lps-lX-cED" firstAttribute="trailing" secondItem="oH1-pw-JGU" secondAttribute="trailing" constant="10" id="g0w-Vf-BTK"/>
                             <constraint firstItem="G58-2p-qd9" firstAttribute="top" secondItem="lps-lX-cED" secondAttribute="top" constant="30" id="g6w-Hb-YZG"/>
+                            <constraint firstItem="lps-lX-cED" firstAttribute="trailing" secondItem="IMS-2t-fi4" secondAttribute="trailing" constant="20" id="h0E-tW-28A"/>
+                            <constraint firstItem="IMS-2t-fi4" firstAttribute="top" secondItem="Uaw-sU-GtA" secondAttribute="bottom" constant="20" id="jlG-gA-gDz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2hY-0a-0oa"/>
                     <connections>
                         <outlet property="amountTextField" destination="Uaw-sU-GtA" id="hjC-W9-jSK"/>
+                        <outlet property="categoryButton" destination="IMS-2t-fi4" id="rfl-6g-TMg"/>
+                        <outlet property="doneButton" destination="gtq-Lk-TMj" id="S5K-Tf-dUd"/>
+                        <outlet property="pickerOverlayView" destination="oH1-pw-JGU" id="KMk-PJ-1bj"/>
+                        <outlet property="pickerView" destination="9ac-uq-cRe" id="0HJ-bV-daO"/>
                         <outlet property="submitButton" destination="Bn5-gX-nyQ" id="pBw-oi-Opc"/>
                     </connections>
                 </viewController>
@@ -290,7 +346,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

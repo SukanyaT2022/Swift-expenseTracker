@@ -7,14 +7,13 @@
 
 import UIKit
 import CoreData
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
-    
-
     @IBOutlet weak var expenseBaseView: UIView!
     
     @IBOutlet weak var expenseTableView: UITableView!
-    
+    var categoryArray = ["Gas","Transport","Home","Grocery","Phone","Other"]
     var expenseList: [ExpenseEntity]?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +26,33 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         expenseTableView.delegate = self
         expenseTableView.dataSource = self
+        
+        saveCategory()
     }
+//    move screen one to two and come back to one again use ViewWillAppear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getExpense()
+        
+    }
+    //save array line 16 catergoryArray one by one so we use for loop
+    func saveCategory(){
+        if let appDelegate = (UIApplication.shared.delegate as? AppDelegate){
+            //first check if they have catergories on databae or not if database there so no need to save but if not found se we need to save line 38 to 41 check save or not
+            let fetchRequest = Category.fetchRequest()
+            if let categories = try? appDelegate.persistentContainer.viewContext.fetch(fetchRequest), categories.count > 0{
+                return
+            }
+            //43 to 50 crate from the array line 16 and save
+            let context = appDelegate.persistentContainer.viewContext
+            //for loop create catergory and save one by one
+            for categoryName in categoryArray{
+                let description = NSEntityDescription.entity(forEntityName:"Category", in: context)
+                let entity = NSManagedObject(entity: description!, insertInto: context) as? Category
+                entity?.categoryName = categoryName
+            }
+            appDelegate.saveContext()//just save
+        }
     }
     func getExpense(){
         //inable to get data we need to make a request from data base
@@ -56,7 +78,7 @@ extension ViewController{
         //to get the data for respective row --which row which data or which expense
         let expense = expenseList?[indexPath.row]//indexpath is opsition row postion
         cell.expenseTitle.text = expense?.category
-        cell.expenseAmountLabel.text = expense?.amount
+        cell.expenseAmountLabel.text = "$ \(expense?.amount ?? "")"
         return cell
     }
 }

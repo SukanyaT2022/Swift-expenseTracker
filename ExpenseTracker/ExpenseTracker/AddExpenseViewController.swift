@@ -13,16 +13,34 @@ class AddExpenseViewController: UIViewController{
     
     @IBOutlet weak var submitButton: UIButton!
     
+    @IBOutlet weak var pickerOverlayView: UIView!
+    
+    @IBOutlet weak var pickerView: UIPickerView!
+    
+    @IBOutlet weak var doneButton: UIButton!
+    
+    @IBOutlet weak var categoryButton: UIButton!
+    
+    var categoryList : [Category]?//Category come from DataBase
     var amountString = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         amountTextField.delegate = self
         //difference delegate get data--datasource set data
+        pickerView.delegate = self
+        pickerView.dataSource = self
     }
     @IBAction func submitButtonAction(_ sender: Any) {
         amountTextField.resignFirstResponder()
     saveExpense()
     }
+    
+    @IBAction func categoryButtonAction(_ sender: Any) {
+    }
+    
+    @IBAction func doneButtonAction(_ sender: Any) {
+    }
+    
     func saveExpense(){
         if let appDelegate = (UIApplication.shared.delegate as? AppDelegate){
            let context = appDelegate.persistentContainer.viewContext
@@ -47,4 +65,17 @@ extension AddExpenseViewController: UITextFieldDelegate{
     func textFieldDidEndEditing(_ textField: UITextField) {
         amountString = textField.text ?? ""
     }
+}
+extension AddExpenseViewController: UIPickerViewDelegate,UIPickerViewDataSource{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+//        we have only one colum from the list
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        //how many catergory
+        return categoryList?.count ?? 0
+    }
+    
+    
 }
