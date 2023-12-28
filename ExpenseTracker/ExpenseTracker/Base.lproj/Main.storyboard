@@ -285,6 +285,14 @@
                                     <constraint firstItem="9ac-uq-cRe" firstAttribute="leading" secondItem="oH1-pw-JGU" secondAttribute="leading" id="p8E-QD-75R"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YGv-f6-p3u">
+                                <rect key="frame" x="20" y="293.33333333333331" width="353" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="w9G-6R-j5U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lps-lX-cED"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -292,6 +300,7 @@
                             <constraint firstItem="G58-2p-qd9" firstAttribute="leading" secondItem="lps-lX-cED" secondAttribute="leading" constant="30" id="1jY-0X-1Cg"/>
                             <constraint firstItem="IMS-2t-fi4" firstAttribute="leading" secondItem="lps-lX-cED" secondAttribute="leading" constant="20" id="4MM-Rp-1sl"/>
                             <constraint firstItem="lps-lX-cED" firstAttribute="trailing" secondItem="35R-pZ-qvH" secondAttribute="trailing" constant="30" id="4fh-OL-dZK"/>
+                            <constraint firstItem="YGv-f6-p3u" firstAttribute="leading" secondItem="lps-lX-cED" secondAttribute="leading" constant="20" id="IWh-49-Tdj"/>
                             <constraint firstItem="Bn5-gX-nyQ" firstAttribute="top" secondItem="Uaw-sU-GtA" secondAttribute="bottom" constant="150" id="JdP-8i-FPL"/>
                             <constraint firstItem="oH1-pw-JGU" firstAttribute="leading" secondItem="lps-lX-cED" secondAttribute="leading" constant="10" id="Ldi-Ve-Jw2"/>
                             <constraint firstItem="35R-pZ-qvH" firstAttribute="leading" secondItem="Uaw-sU-GtA" secondAttribute="trailing" constant="10" id="Ng9-M5-MRJ"/>
@@ -306,12 +315,15 @@
                             <constraint firstItem="G58-2p-qd9" firstAttribute="top" secondItem="lps-lX-cED" secondAttribute="top" constant="30" id="g6w-Hb-YZG"/>
                             <constraint firstItem="lps-lX-cED" firstAttribute="trailing" secondItem="IMS-2t-fi4" secondAttribute="trailing" constant="20" id="h0E-tW-28A"/>
                             <constraint firstItem="IMS-2t-fi4" firstAttribute="top" secondItem="Uaw-sU-GtA" secondAttribute="bottom" constant="20" id="jlG-gA-gDz"/>
+                            <constraint firstItem="lps-lX-cED" firstAttribute="trailing" secondItem="YGv-f6-p3u" secondAttribute="trailing" constant="20" id="pa1-gl-qVR"/>
+                            <constraint firstItem="YGv-f6-p3u" firstAttribute="top" secondItem="IMS-2t-fi4" secondAttribute="bottom" constant="15" id="tAn-Pb-w33"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2hY-0a-0oa"/>
                     <connections>
                         <outlet property="amountTextField" destination="Uaw-sU-GtA" id="hjC-W9-jSK"/>
                         <outlet property="categoryButton" destination="IMS-2t-fi4" id="rfl-6g-TMg"/>
+                        <outlet property="catergoryTextField" destination="YGv-f6-p3u" id="ROo-hG-gi9"/>
                         <outlet property="doneButton" destination="gtq-Lk-TMj" id="S5K-Tf-dUd"/>
                         <outlet property="pickerOverlayView" destination="oH1-pw-JGU" id="KMk-PJ-1bj"/>
                         <outlet property="pickerView" destination="9ac-uq-cRe" id="0HJ-bV-daO"/>
