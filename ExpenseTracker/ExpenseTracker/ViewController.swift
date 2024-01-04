@@ -11,6 +11,7 @@ import CoreData
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
     @IBOutlet weak var expenseBaseView: UIView!
+    @IBOutlet weak var totalExpenseLabel: UILabel!
     
     @IBOutlet weak var expenseTableView: UITableView!
     var categoryArray = ["Gas","Transport","Home","Grocery","Phone","Other"]
@@ -33,7 +34,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getExpense()
-        
+        if let expenseList{
+            var totalExpense = 0
+            for expense in expenseList{
+                totalExpense += Int(expense.amount ?? "0") ?? 0 // convert number which is string to int so we can make total
+            }
+            totalExpenseLabel.text = "$\(totalExpense)"
+        }
+       
     }
     //save array line 16 catergoryArray one by one so we use for loop
     func saveCategory(){
