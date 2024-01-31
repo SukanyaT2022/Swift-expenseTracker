@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184323442B5989740094D831 /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184323432B5989740094D831 /* CategoryListViewController.swift */; };
+		184323462B598BF70094D831 /* CatergoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184323452B598BF70094D831 /* CatergoryTableViewCell.swift */; };
 		184693B82B22308D00F70C1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184693B72B22308D00F70C1A /* AppDelegate.swift */; };
 		184693BA2B22308D00F70C1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184693B92B22308D00F70C1A /* SceneDelegate.swift */; };
 		184693BC2B22308D00F70C1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184693BB2B22308D00F70C1A /* ViewController.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		184323432B5989740094D831 /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
+		184323452B598BF70094D831 /* CatergoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatergoryTableViewCell.swift; sourceTree = "<group>"; };
 		184693B42B22308D00F70C1A /* ExpenseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		184693B72B22308D00F70C1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		184693B92B22308D00F70C1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 		184693AB2B22308D00F70C1A = {
 			isa = PBXGroup;
 			children = (
+				184323432B5989740094D831 /* CategoryListViewController.swift */,
 				184693B62B22308D00F70C1A /* ExpenseTracker */,
 				184693B52B22308D00F70C1A /* Products */,
 			);
@@ -90,6 +95,7 @@
 				18C041402B28C74800B772C1 /* ExpenseTableViewCell.swift */,
 				18BEBDCC2B2CB4AC0017E832 /* AddExpenseViewController.swift */,
 				18BEBDCE2B2CBE4B0017E832 /* Date+Extension.swift */,
+				184323452B598BF70094D831 /* CatergoryTableViewCell.swift */,
 			);
 			path = ExpenseTracker;
 			sourceTree = "<group>";
@@ -166,10 +172,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				18C041412B28C74800B772C1 /* ExpenseTableViewCell.swift in Sources */,
+				184323442B5989740094D831 /* CategoryListViewController.swift in Sources */,
 				184693BC2B22308D00F70C1A /* ViewController.swift in Sources */,
 				1871E7CC2B2B6B6F00B69EC9 /* ExpenseEntity+CoreDataClass.swift in Sources */,
 				1871E7CD2B2B6B6F00B69EC9 /* ExpenseEntity+CoreDataProperties.swift in Sources */,
 				1871E7CA2B2B6B6F00B69EC9 /* Category+CoreDataClass.swift in Sources */,
+				184323462B598BF70094D831 /* CatergoryTableViewCell.swift in Sources */,
 				18BEBDCF2B2CBE4B0017E832 /* Date+Extension.swift in Sources */,
 				184693B82B22308D00F70C1A /* AppDelegate.swift in Sources */,
 				184693BA2B22308D00F70C1A /* SceneDelegate.swift in Sources */,
